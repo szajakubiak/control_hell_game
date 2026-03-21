@@ -1,16 +1,28 @@
 pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
+--control hell game
+--by jerboas
+
+--todo
+------
+--implement basic control
+--make playable single level
+--implement control switching
+
+-->8
+--init
 function _init()
-
 end
 
+-->8
+--update
 function _update()
-
 end
 
+-->8
+--draw
 function _draw()
-
 end
 
 __gfx__
