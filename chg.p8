@@ -6,7 +6,6 @@ __lua__
 
 --todo
 ------
---implement basic control
 --make playable single level
 --implement control switching
 
