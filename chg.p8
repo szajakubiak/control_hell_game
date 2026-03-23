@@ -7,7 +7,6 @@ __lua__
 --todo
 ------
 --make playable single level
---implement control switching
 
 -->8
 --init
