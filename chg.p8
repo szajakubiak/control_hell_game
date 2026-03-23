@@ -23,6 +23,7 @@ function _init()
 	pspr=1
 	--player position
 	ppos={x=60,y=60}
+	rotate_ctrls()
 end
 
 -->8
@@ -42,6 +43,16 @@ function _update()
 	end
 end
 
+function rotate_ctrls()
+	local temp_ctrls={}
+	
+	temp_ctrls.l=ctrls.d
+	temp_ctrls.r=ctrls.u
+	temp_ctrls.u=ctrls.l
+	temp_ctrls.d=ctrls.r
+	
+	ctrls=temp_ctrls
+end
 -->8
 --draw
 function _draw()
