@@ -22,6 +22,12 @@ function _init()
 	pspr=1
 	--player position
 	ppos={x=60,y=60}
+	
+	--target sprite
+	tspr=3
+	--target position
+	tpos={x=90,y=90}
+	
 	rotate_ctrls()
 end
 
@@ -56,6 +62,11 @@ end
 --draw
 function _draw()
 	cls()
+	
+	--draw target
+	spr(tspr,tpos.x,tpos.y)
+	
+	--draw player
 	spr(pspr,ppos.x,ppos.y)
 end
 
