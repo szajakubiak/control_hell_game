@@ -6,6 +6,7 @@ __lua__
 
 --todo
 ------
+--add collision detection
 --make playable single level
 
 -->8
