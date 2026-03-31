@@ -28,7 +28,12 @@ function _init()
 	--target position
 	tpos={x=90,y=90}
 	
-	rotate_ctrls()
+	rot=flr(rnd(3))
+	if rot>0 then
+		for i=1,rot do
+			rotate_ctrls_cws()
+		end
+	end
 end
 
 -->8
@@ -69,6 +74,8 @@ function _draw()
 	
 	--draw player
 	spr(pspr,ppos.x,ppos.y)
+	
+	print(rot,8,8,7)
 end
 
 __gfx__
