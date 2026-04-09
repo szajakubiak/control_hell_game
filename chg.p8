@@ -8,7 +8,7 @@ __lua__
 ------
 --add collision detection
 --make playable single level
-
+--show control map on screen
 -->8
 --init
 function _init()
@@ -77,6 +77,19 @@ function _draw()
 	spr(pspr,ppos.x,ppos.y)
 	
 	print(rot,8,8,7)
+
+-->8
+--helpers
+function rnd_sign()
+	return rnd({-1,1})
+end
+
+function rnd_int(
+	val_str,val_end
+)
+	local base
+	base=flr(rnd(val_end+1-val_str))
+	return val_str+base
 end
 
 __gfx__
