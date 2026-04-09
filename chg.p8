@@ -27,8 +27,11 @@ function _init()
 	--target sprite
 	tspr=3
 	--target position
-	tpos={x=90,y=90}
-	
+	tpos={}
+	tpos.x=ppos.x
+	tpos.x+=rnd_sign()*rnd_int(25,60)
+	tpos.y=ppos.y
+	tpos.y+=rnd_sign()*rnd_int(25,60)
 	rot=flr(rnd(3))
 	if rot>0 then
 		for i=1,rot do
