@@ -6,9 +6,11 @@ __lua__
 
 --todo
 ------
+--mirror controls
+--show control map on screen
 --add collision detection
 --make playable single level
---show control map on screen
+
 -->8
 --init
 function _init()
