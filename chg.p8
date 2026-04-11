@@ -37,7 +37,7 @@ function _init()
 	rot=flr(rnd(3))
 	if rot>0 then
 		for i=1,rot do
-			rotate_ctrls_cws()
+			ctrls=rotate_ctrls_cws()
 		end
 	end
 end
@@ -68,7 +68,7 @@ function rotate_ctrls_cws()
 	temp_ctrls.u=ctrls.r
 	temp_ctrls.d=ctrls.l
 
-	ctrls=temp_ctrls
+	return temp_ctrls
 end
 -->8
 --draw
