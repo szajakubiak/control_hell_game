@@ -82,8 +82,10 @@ function _draw()
 	spr(pspr,ppos.x,ppos.y)
 	
 	print(rot,8,8,7)
-	print(tpos.x,8,16,7)
-	print(tpos.y,8,24,7)
+	print(ctrls.u,16,16,7)
+	print(ctrls.l,8,24,7)
+	print(ctrls.r,24,24,7)
+	print(ctrls.d,16,32,7)
 end
 
 -->8
