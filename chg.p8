@@ -10,6 +10,7 @@ __lua__
 --show control map on screen
 --add collision detection
 --make playable single level
+--change player to 16x8 px
 
 -->8
 --init
