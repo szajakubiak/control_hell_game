@@ -4,6 +4,15 @@ __lua__
 --control hell game
 --by jerboas
 
+--ideas
+------
+--*zelda-like graphics
+--*each level has different
+--control scheme
+--*goal is to move player to
+--target avoiding traps and
+--obstacles
+
 --todo
 ------
 --mirror controls
