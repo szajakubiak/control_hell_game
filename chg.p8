@@ -109,7 +109,7 @@ function rnd_int(
 )
 	local base
 	base=flr(rnd(val_end+1-val_srt))
-	return val_str+base
+	return val_srt+base
 end
 
 __gfx__
