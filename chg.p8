@@ -105,10 +105,10 @@ function rnd_sign()
 end
 
 function rnd_int(
-	val_str,val_end
+	val_srt,val_end
 )
 	local base
-	base=flr(rnd(val_end+1-val_str))
+	base=flr(rnd(val_end+1-val_srt))
 	return val_str+base
 end
 
