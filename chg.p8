@@ -73,10 +73,10 @@ end
 function rotate_ctrls_cws()
 	local temp_ctrls={}
 	
-	temp_ctrls.l=ctrls.u
-	temp_ctrls.r=ctrls.d
-	temp_ctrls.u=ctrls.r
-	temp_ctrls.d=ctrls.l
+	temp_ctrls.l=ctrls.d
+	temp_ctrls.r=ctrls.u
+	temp_ctrls.u=ctrls.l
+	temp_ctrls.d=ctrls.r
 
 	return temp_ctrls
 end
