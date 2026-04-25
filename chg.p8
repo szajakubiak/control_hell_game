@@ -37,7 +37,11 @@ function _init()
 	ppos={x=60,y=60}
 	
 	--target sprite
-	tspr=3
+	tspr={1,2}
+	--target sprite animation pointer
+	tsprp=1
+	--target sprite animation clock
+	tsprclk=0
 	--target position
 	tpos={}
 	tpos.x=ppos.x
@@ -67,6 +71,16 @@ function _update()
 	if btn(ctrls.d) then
 		ppos.y+=1
 	end
+
+	--target animation
+	tsprclk+=1
+	if tsprclk>=16 then
+		tsprclk=0
+		tsprp+=1
+		if tsprp>2 then
+			tsprp=1
+		end
+	end
 end
 
 --rotate controls clockwise
@@ -86,7 +100,7 @@ function _draw()
 	cls()
 	
 	--draw target
-	spr(tspr,tpos.x,tpos.y)
+	spr(tspr[tsprp],tpos.x,tpos.y)
 	
 	--draw player
 	spr(pspr,ppos.x,ppos.y)
