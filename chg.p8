@@ -109,7 +109,6 @@ function _draw()
 	--draw player
 	spr(pspr,ppos.x,ppos.y,1,2)
 	
-	print(rot,8,8,7)
 	print(ctrls.u,16,16,7)
 	print(ctrls.l,8,24,7)
 	print(ctrls.r,24,24,7)
