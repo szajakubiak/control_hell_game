@@ -16,8 +16,6 @@ __lua__
 --todo
 ------
 --*mirror controls
---*don't allow to go out of
---screen
 --*show control map on screen
 --*add collision detection
 --*make playable single level
