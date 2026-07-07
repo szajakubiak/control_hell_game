@@ -65,15 +65,27 @@ end
 function _update()
 	if btn(ctrls.l) then
 		ppos.x-=1
+		if ppos.x<0 then
+		 ppos.x=0
+		end
 	end
 	if btn(ctrls.r) then
 		ppos.x+=1
+		if ppos.x>119 then
+		 ppos.x=119
+		end
 	end
 	if btn(ctrls.u) then
 		ppos.y-=1
+		if ppos.y<0 then
+			ppos.y=0
+		end
 	end
 	if btn(ctrls.d) then
 		ppos.y+=1
+		if ppos.y>111 then
+			ppos.y=111
+		end
 	end
 
 	--target animation
