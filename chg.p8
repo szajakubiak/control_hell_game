@@ -18,6 +18,7 @@ __lua__
 --*mirror controls
 --*show control map on screen
 --*add collision detection
+--*implement state machine
 --*make playable single level
 --*implement level timer
 --*add animation to control map
