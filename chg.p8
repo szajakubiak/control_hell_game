@@ -15,6 +15,8 @@ __lua__
 
 --todo
 ------
+--*change character to 16x32
+--sprite
 --*mirror controls
 --*show control map on screen
 --*add collision detection
