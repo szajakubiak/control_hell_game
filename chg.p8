@@ -38,7 +38,7 @@ function _init()
 		d=⬇️,
 	}
 	--player sprite
-	pspr=3
+	pspr=5
 	--player position
 	ppos={x=60,y=60}
 	
@@ -121,7 +121,9 @@ function _draw()
 	spr(tspr[tsprp],tpos.x,tpos.y)
 	
 	--draw player
-	spr(pspr,ppos.x,ppos.y,1,2)
+	palt(14, true)
+	spr(pspr,ppos.x,ppos.y,2,2)
+	palt()
 	
 	print(ctrls.u,16,16,7)
 	print(ctrls.l,8,24,7)
