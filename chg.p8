@@ -15,7 +15,7 @@ __lua__
 
 --todo
 ------
---*change character to 16x32
+--*add player sprite animation
 --sprite
 --*mirror controls
 --*show control map on screen
