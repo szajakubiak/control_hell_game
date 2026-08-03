@@ -38,7 +38,7 @@ function _init()
 		d=⬇️,
 	}
 	--player sprite
-	pspr=5
+	pspr=3
 	--player position
 	ppos={x=60,y=60}
 	
