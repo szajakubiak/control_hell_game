@@ -72,8 +72,8 @@ function _update()
 	end
 	if btn(ctrls.r) then
 		ppos.x+=1
-		if ppos.x>119 then
-		 ppos.x=119
+		if ppos.x>111 then
+		 ppos.x=111
 		end
 	end
 	if btn(ctrls.u) then
