@@ -29,6 +29,8 @@ __lua__
 -->8
 --init
 function _init()
+	--game state
+	state="game"
 	--controls map
 	ctrls={
 		l=⬅️,
@@ -64,6 +66,12 @@ end
 -->8
 --update
 function _update()
+	if state=="game" then
+		update_game()
+	end
+end
+
+function update_game()
 	if btn(ctrls.l) then
 		ppos.x-=1
 		if ppos.x<0 then
@@ -114,6 +122,12 @@ end
 -->8
 --draw
 function _draw()
+	if state=="game" then
+		draw_game()
+	end
+end
+
+function draw_game()
 	cls()
 	
 	--draw target
