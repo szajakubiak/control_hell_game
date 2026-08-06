@@ -37,10 +37,12 @@ function _init()
 		u=⬆️,
 		d=⬇️,
 	}
+	--player
+	plyr={}
 	--player sprite
-	pspr=3
+	plyr.spr=3
 	--player position
-	ppos={x=60,y=60}
+	plyr.pos={x=60,y=60}
 	
 	--target sprite
 	tspr={1,2}
@@ -50,9 +52,9 @@ function _init()
 	tsprclk=0
 	--target position
 	tpos={}
-	tpos.x=ppos.x
+	tpos.x=plyr.pos.x
 	tpos.x+=rnd_sign()*rnd_int(25,60)
-	tpos.y=ppos.y
+	tpos.y=plyr.pos.y
 	tpos.y+=rnd_sign()*rnd_int(25,60)
 	rot=flr(rnd(3))
 	if rot>0 then
@@ -72,27 +74,27 @@ end
 
 function update_game()
 	if btn(ctrls.l) then
-		ppos.x-=1
-		if ppos.x<0 then
-		 ppos.x=0
+		plyr.pos.x-=1
+		if plyr.pos.x<0 then
+		 plyr.pos.x=0
 		end
 	end
 	if btn(ctrls.r) then
-		ppos.x+=1
-		if ppos.x>111 then
-		 ppos.x=111
+		plyr.pos.x+=1
+		if plyr.pos.x>111 then
+		 plyr.pos.x=111
 		end
 	end
 	if btn(ctrls.u) then
-		ppos.y-=1
-		if ppos.y<0 then
-			ppos.y=0
+		plyr.pos.y-=1
+		if plyr.pos.y<0 then
+			plyr.pos.y=0
 		end
 	end
 	if btn(ctrls.d) then
-		ppos.y+=1
-		if ppos.y>111 then
-			ppos.y=111
+		plyr.pos.y+=1
+		if plyr.pos.y>111 then
+			plyr.pos.y=111
 		end
 	end
 
@@ -134,7 +136,7 @@ function draw_game()
 	
 	--draw player
 	palt(14, true)
-	spr(pspr,ppos.x,ppos.y,2,2)
+	spr(plyr.spr,plyr.pos.x,plyr.pos.y,2,2)
 	palt()
 	
 	print(ctrls.u,16,16,7)
