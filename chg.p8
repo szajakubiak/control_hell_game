@@ -30,6 +30,12 @@ __lua__
 function _init()
 	--game state
 	state="game"
+	if state=="game" then
+		init_game()
+	end
+end
+
+function init_game()
 	--controls map
 	ctrls={
 		l=⬅️,
