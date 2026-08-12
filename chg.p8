@@ -49,6 +49,11 @@ function init_game()
 	plyr.spr=3
 	--player position
 	plyr.pos={x=60,y=60}
+	--player speed
+	plyr.sx=0
+	plyr.sy=0
+	--player animation clock
+	plyr.sprclk=8
 	
 	--target sprite
 	tspr={1,2}
@@ -79,29 +84,32 @@ function _update()
 end
 
 function update_game()
+	--update player speed
+	plyr.sx=0
+	plyr.sy=0
 	if btn(ctrls.l) then
-		plyr.pos.x-=1
-		if plyr.pos.x<0 then
-		 plyr.pos.x=0
-		end
+		plyr.sx=-1
 	end
 	if btn(ctrls.r) then
-		plyr.pos.x+=1
-		if plyr.pos.x>111 then
-		 plyr.pos.x=111
-		end
+		plyr.sx=1
 	end
 	if btn(ctrls.u) then
-		plyr.pos.y-=1
-		if plyr.pos.y<0 then
-			plyr.pos.y=0
-		end
+		plyr.sy=-1
 	end
 	if btn(ctrls.d) then
-		plyr.pos.y+=1
-		if plyr.pos.y>111 then
-			plyr.pos.y=111
-		end
+		plyr.sy=1
+	end
+	
+	--update player position
+	local newx=plyr.pos.x+plyr.sx
+	if newx>=0 and newx<=111 then
+		plyr.pos.x=newx
+	end
+	local newy=plyr.pos.y+plyr.sy
+	if newy>=0 and newy<=111 then
+		plyr.pos.y=newy
+	end
+	
 	end
 
 	--target animation
