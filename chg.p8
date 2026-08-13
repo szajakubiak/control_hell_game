@@ -110,6 +110,16 @@ function update_game()
 		plyr.pos.y=newy
 	end
 	
+	--update player animation
+	if plyr.sx!=0 or plyr.sy!=0 then
+		plyr.sprclk-=1
+	else
+		plyr.spr=3
+	end
+	
+	if plyr.sprclk<=0 then
+		plyr.sprclk=8
+		
 	end
 
 	--target animation
