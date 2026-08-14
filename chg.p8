@@ -45,6 +45,13 @@ function init_game()
 	}
 	--player
 	plyr={}
+	--player sprites map
+	plyr.sprmap={
+		⬅️={sp={7,9},rt={1,1}},
+		➡️={sp={7,9},rt={0,0}},
+		⬆️={sp={11,13},rt={0,0}},
+		⬇️={sp={3,5},rt={0,0}},
+	}
 	--player sprite
 	plyr.spr=3
 	--player position
