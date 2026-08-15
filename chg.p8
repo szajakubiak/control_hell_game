@@ -117,16 +117,29 @@ function update_game()
 		plyr.pos.y=newy
 	end
 	
-	--update player animation
+	--update player direction
 	if plyr.sx!=0 or plyr.sy!=0 then
+		--player is moving
 		plyr.sprclk-=1
+		--moving up
+		if plyr.sy<0 then
+			plyr.dir=⬆️
+		else
+			if plyr.sy>0 then
+				plyr.dir=⬇️
+			end
+		else
+			if plyr.sx<0 then
+		 	plyr.dir=⬅️
+		 end
+		else
+			if plyr.sx>0 then
+				plyr.dir=➡️
+			end
+		end
 	else
-		plyr.spr=3
-	end
-	
-	if plyr.sprclk<=0 then
-		plyr.sprclk=8
-		
+		--player is not moving
+		plyr.dir=⬇️
 	end
 
 	--target animation
