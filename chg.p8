@@ -142,6 +142,15 @@ function update_game()
 		plyr.dir=⬇️
 	end
 
+	--update player animation
+	if plyr.sprclk<=0 then
+		plyr.sprclk=8
+		plyr.sprpos+=1
+		if plyr.sprpos>1 then
+			plyr.sprpos=0
+		end
+	end
+
 	--target animation
 	tsprclk+=1
 	if tsprclk>=16 then
