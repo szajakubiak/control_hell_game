@@ -124,18 +124,12 @@ function update_game()
 		--moving up
 		if plyr.sy<0 then
 			plyr.dir=⬆️
-		else
-			if plyr.sy>0 then
+		elseif plyr.sy>0 then
 				plyr.dir=⬇️
-			end
-		else
-			if plyr.sx<0 then
+		elseif plyr.sx<0 then
 		 	plyr.dir=⬅️
-		 end
-		else
-			if plyr.sx>0 then
+		elseif plyr.sx>0 then
 				plyr.dir=➡️
-			end
 		end
 	else
 		--player is not moving
