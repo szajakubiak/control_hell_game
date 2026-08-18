@@ -183,7 +183,13 @@ function draw_game()
 	
 	--draw player
 	palt(14, true)
-	spr(plyr.spr,plyr.pos.x,plyr.pos.y,2,2)
+	spr(
+		plyr.spr,
+		plyr.pos.x,
+		plyr.pos.y,
+		2,
+		2
+	)
 	palt()
 	
 	print(ctrls.u,16,16,7)
