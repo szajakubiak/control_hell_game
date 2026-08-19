@@ -52,6 +52,8 @@ function init_game()
 		⬆️={sp={11,13},rt={0,0}},
 		⬇️={sp={3,5},rt={0,0}},
 	}
+	--player sprite position
+	plyr.sprpos=1
 	--player sprite
 	plyr.spr=3
 	--player position
@@ -123,26 +125,30 @@ function update_game()
 		plyr.sprclk-=1
 		--moving up
 		if plyr.sy<0 then
-			plyr.dir=⬆️
+			plyr.dir="⬆️"
 		elseif plyr.sy>0 then
-				plyr.dir=⬇️
+				plyr.dir="⬇️"
 		elseif plyr.sx<0 then
-		 	plyr.dir=⬅️
+		 	plyr.dir="⬅️"
 		elseif plyr.sx>0 then
-				plyr.dir=➡️
+				plyr.dir="➡️"
 		end
 	else
 		--player is not moving
-		plyr.dir=⬇️
+		plyr.dir="⬇️"
 	end
 
 	--update player animation
 	if plyr.sprclk<=0 then
 		plyr.sprclk=8
 		plyr.sprpos+=1
-		if plyr.sprpos>1 then
-			plyr.sprpos=0
+		if plyr.sprpos>2 then
+			plyr.sprpos=1
 		end
+		plyr.spr=plyr.sprmap
+			[plyr.dir]
+				["sp"]
+					[plyr.sprpos]
 	end
 
 	--target animation
