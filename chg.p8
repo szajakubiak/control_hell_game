@@ -47,15 +47,15 @@ function init_game()
 	plyr={}
 	--player sprites map
 	plyr.sprmap={
-		⬅️={sp={7,9},fl={1,1}},
-		➡️={sp={7,9},fl={0,0}},
-		⬆️={sp={11,13},fl={0,0}},
-		⬇️={sp={3,5},fl={0,0}},
+		⬅️={sp={7,9},fl=true},
+		➡️={sp={7,9},fl=false},
+		⬆️={sp={11,13},fl=false},
+		⬇️={sp={3,5},fl=false},
 	}
 	--player sprite position
 	plyr.sprpos=1
 	--player sprite flip
-	plyr.sprflip=0
+	plyr.sprflip=false
 	--player sprite
 	plyr.spr=3
 	--player position
@@ -154,7 +154,6 @@ function update_game()
 		plyr.sprflip=plyr.sprmap
 			[plyr.dir]
 				["fl"]
-					[plyr.sprpos]
 	end
 
 	--target animation
@@ -201,7 +200,8 @@ function draw_game()
 		plyr.pos.y,
 		2,
 		2,
-		plyr.sprflip
+		plyr.sprflip,
+		false
 	)
 	palt()
 	
