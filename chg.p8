@@ -15,7 +15,6 @@ __lua__
 
 --todo
 ------
---*add player sprite animation
 --*mirror controls
 --*show control map on screen
 --*add collision detection
