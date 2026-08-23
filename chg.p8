@@ -208,7 +208,6 @@ function draw_game()
 	print(ctrls.l,8,24,7)
 	print(ctrls.r,24,24,7)
 	print(ctrls.d,16,32,7)
-	print(plyr.sprflip,8,40)
 end
 
 -->8
