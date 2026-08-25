@@ -129,10 +129,13 @@ function update_game()
 		--moving up
 		if plyr.sy<0 then
 			plyr.dir="⬆️"
+		--moving down
 		elseif plyr.sy>0 then
 				plyr.dir="⬇️"
+		--movinf left
 		elseif plyr.sx<0 then
 		 	plyr.dir="⬅️"
+		--moving right
 		elseif plyr.sx>0 then
 				plyr.dir="➡️"
 		end
