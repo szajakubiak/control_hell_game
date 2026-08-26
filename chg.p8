@@ -53,6 +53,10 @@ function init_game()
 		⬆️={sp={11,13},fl=false},
 		⬇️={sp={3,5},fl=false},
 	}
+	--player sprite direction
+	plyr.dir="⬇️"
+	--previous sprite direction
+	plyr.prevdir=plyr.dir
 	--player sprite position
 	plyr.sprpos=1
 	--player sprite flip
@@ -125,7 +129,6 @@ function update_game()
 	--update player direction
 	if plyr.sx!=0 or plyr.sy!=0 then
 		--player is moving
-		plyr.sprclk-=1
 		--moving up
 		if plyr.sy<0 then
 			plyr.dir="⬆️"
@@ -139,6 +142,17 @@ function update_game()
 		elseif plyr.sx>0 then
 				plyr.dir="➡️"
 		end
+		--update sprite clock
+		--decrease clock count if
+		--moving in the same direction
+		if plyr.dir==plyr.prevdir then
+			plyr.sprclk-=1
+		--set clock to 0 if direction
+		--changed
+		else
+			plyr.sprclk=0
+		end
+		plyr.prevdir=plyr.dir
 	else
 		--player is not moving
 		plyr.dir="⬇️"
