@@ -15,8 +15,6 @@ __lua__
 
 --todo
 ------
---*reset sprite animation
---when button released
 --*mirror controls
 --*show control map on screen
 --*add collision detection
